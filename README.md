@@ -13,6 +13,7 @@ the icon, it will show it's name in the search field so you can copy the name.
 
 ```
 flutter run -d windows
+flutter run -d macos
 ```
 
 # Generating the list of icons
