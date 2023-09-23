@@ -9,6 +9,8 @@ visibility_sharp will be displayed.
 When you move your mouse over the icon it shows it's name as a tooltip. If you click
 the icon, it will show it's name in the search field so you can copy the name.
 
+![](flutter_icons.jpg)
+
 # Build and run
 
 ```
