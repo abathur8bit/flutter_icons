@@ -13,10 +13,30 @@ the icon, it will show it's name in the search field so you can copy the name.
 
 # Build and run
 
+Run the app with the following
 ```
 flutter run -d windows
 flutter run -d macos
 ```
+
+## Windows EXE
+If you want to build an exe, use the following and grab the exe from
+
+```
+C:> flutter build windows
+Building Windows application...                                    48.8s
+√  Built build\windows\runner\Release\flutter_icons.exe (0.1MB).
+```
+
+You will need the executable, dlls, data folder, and Visual C++ redistributables.
+
+The Flutter executable can be found in your project under `build\windows\runner\release`.
+
+	release
+	|   flutter_icons.exe
+	|   flutter_windows.dll
+	|
+	\---data
 
 # Generating the list of icons
 The following will get a list of all flutter icons.
@@ -31,6 +51,6 @@ The run the php script.
 ```
 grep "static const IconData" C:\util\flutter\packages\flutter\lib\src\material\icons.dart | sed s"/.*static const IconData //" | sed "s/ =.*//" | sort > iconnames.txt
 grep "static const IconData" ~/snap/flutter/common/flutter/packages/flutter/lib/src/material/icons.dart | sed s"/.*static const IconData //" | sed "s/ =.*//" | sort > iconnames.txt
-php icons.php
+php icons.php > lib/icon_info.dart
 ```
 

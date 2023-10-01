@@ -22,7 +22,7 @@ _EOT_;
 echo $start;
 while($line = fgets($handle)) {
     $line = trim($line);
-    echo "    IconInfo(name:\"$line\",icon:Icon(Icons.$line)),\n";
+    echo "    IconInfo(name:\"$line\",icon:Icon(Icons.$line,size:50)),\n";
 }
 fclose($handle);
 echo $end;
